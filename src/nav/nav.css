@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Merriweather Sans', sans-serif;
+  src: local('Merriweather Sans'), url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap'), format('woff2');
+}
+.not-logged-in {
+  padding: 20px;
+  background-color:  white;
+  height: 20px;
+}
+
+.left {
+  float: left;
+  color: black;
+  text-decoration: none;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.right {
+  float: right;
+  margin-left: 10px;
+  color: black;
+  text-decoration: none;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+

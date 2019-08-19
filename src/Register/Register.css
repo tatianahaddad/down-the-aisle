@@ -1,0 +1,84 @@
+@media screen and (min-width: 440px) {
+  .register-containter {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 40px;
+    height: 470px;
+    width: 300px;
+    background-color: rgba(0, 0, 255, 0.466);
+  }
+
+  .sign-up {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+  }
+  
+  b {
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .register-input {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .sides {
+    margin-left: 10px;
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .button-container {
+    float: right;
+  }
+  
+  .main-statement {
+    margin: 15px;
+    color: white;
+  }
+  
+  .join-button { 
+    margin-top: 15px;
+    height: 50px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%
+  }
+  
+  .already-reg {
+    text-align: center;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  .name-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register-containter {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 470px;
+    width: 500px;
+    background-color: rgba(0, 0, 255, 0.466);
+  }
+  
+}
+/*.register-containter {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 470px;
+  width: 300px;
+  background-color: rgba(0, 0, 255, 0.466);
+}*/
+
