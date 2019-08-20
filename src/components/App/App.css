@@ -1,11 +1,12 @@
 .App {
   /*background-color: rgb(245, 245, 245);*/
-  background-image: url(../images/news-overlay.png);
+  background-image: linear-gradient(rgba(172, 172, 172, 0.4), rgba(0,0,0, 0.4)), url(../images/news-overlay.png);
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 95%;
   
 }
