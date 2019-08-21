@@ -38,13 +38,14 @@
   }
 
   .centering {
+    margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
-  .left-statement {
+  .statement-bubbles {
     border-radius: 25px;
     box-shadow: 5px 10px darkblue;
     padding: 1%;
@@ -67,40 +68,13 @@
     font-weight: bold;
   }
 
-  .middle-statement{
-    border-radius: 25px;
-    box-shadow: 5px 10px darkblue;
-    padding: 1%;
-    background-color: cornflowerblue;
-    height: 250px;
-    width: 300px;
-    font-size: 30px;
-    font-family: 'Stint Ultra Condensed', cursive;
-    margin-top: 50px;
-    color: white;
-  }
-
-  /*p::first-letter { 
-    font-size: 200%;
-  }*/
-
-  .right-statement{
-    border-radius: 25px;
-    box-shadow: 5px 10px darkblue;
-    padding: 1%;
-    background-color: cornflowerblue;
-    height: 250px;
-    width: 300px;
-    font-size: 30px;
-    font-family: 'Stint Ultra Condensed', cursive;
-    margin-top: 50px;
-    color: white;
-  }
-
   .lets-go {
+    border-radius: 25px;
     height: 50px;
     width: 100px;
-    margin: auto;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .started {
@@ -119,10 +93,34 @@
     /*text-align: center;*/
   }
 
-  .start-button {
-    margin-top: 15px;
-    height: 35px;
-    margin-right: 50%
+  .centering {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+  }
+
+  .statement-bubbles {
+    border-radius: 25px;
+    box-shadow: 5px 10px darkblue;
+    padding: 1%;
+    background-color: cornflowerblue;
+    height: 250px;
+    width: 300px;
+    font-size: 30px;
+    font-family: 'Stint Ultra Condensed', cursive;
+    margin-top: 50px;
+    margin-right: 20px;
+    color: white;
+  }
+
+  .lets-go {
+    border-radius: 25px;
+    height: 50px;
+    width: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }

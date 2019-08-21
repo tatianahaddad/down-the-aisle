@@ -8,14 +8,14 @@ export class LandingPage extends Component {
       <div className="landing-container">
         <h1 className="main-title">Down the Aisle</h1>
         <div className="centering">
-          <div className="left-statement">
+          <div className="statement-bubbles">
             <p className="headline">ALL THE NEWS </p>
             <p className="border" />
             <p>
               Catch up instantly on the top news stories sweeping the nation.
             </p>
           </div>
-          <div className="middle-statement">
+          <div className="statement-bubbles">
             <p className="headline">ALL THE SOURCES</p>
             <p className="border" />
             <p>
@@ -23,8 +23,8 @@ export class LandingPage extends Component {
               political spectrums.
             </p>
           </div>
-          <div className="right-statement">
-            <p className="headline">EVERY PERSPECTIVE</p>
+          <div className="statement-bubbles">
+            <p className="headline">EVERY SIDE</p>
             <p className="border" />
             <p>
               Like, comment, and join in on constructive discussion. No bias,
