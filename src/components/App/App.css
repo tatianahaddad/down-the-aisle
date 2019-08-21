@@ -1,12 +1,19 @@
-.App {
-  background-image: /*linear-gradient(rgba(172, 172, 172, 0.4), rgba(172, 172, 172, 0.4)), */url(../images/colorful-map.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: auto;
-  
+/*@media screen and (min-width: 320px) {
+  .App {
+    background-image: url(../images/colorful-map.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    
+  }
 }
+@media screen and (min-width: 800px) {
+  .App {
+    height: -webkit-fill-available;
+  }
+}*/

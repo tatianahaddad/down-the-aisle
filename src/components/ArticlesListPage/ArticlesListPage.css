@@ -2,14 +2,20 @@
   .title {
     color: black;
     margin-top: 30px;
-    font-size: 50px;
+    font-size: 25px;
     text-align: center;
+    font-family: 'Gravitas One', cursive;
   }
 
   .top-stories {
+    background-color: white;
+    font-weight: bold;
+    margin: auto;
     text-align: center;
+    width: 75%;
     color: black;
     margin-bottom: 20px;
+    font-size: 30px;
   }
 
   .articles-container {
@@ -58,6 +64,13 @@
 }
 
 @media screen and (min-width: 800px) {
+  .title {
+    color: black;
+    margin-top: 30px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Gravitas One', cursive;
+  }
   .articles-container {
     border-radius: 10px;
     margin: auto;

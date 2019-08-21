@@ -41,12 +41,13 @@ export class Login extends Component {
             />
             <div className="button-container">
               <button className="join-button">Sign in</button>
-            </div>
-          </div>
-          <button onClick={this.useDemo}>Use demo account</button>
+              <button onClick={this.useDemo}>Use demo account</button>
           <p className="already-reg">
             Need an account? <Link to="/register">Sign up</Link>
           </p>
+            </div>
+          </div>
+          
         </form>
       </div>
     );

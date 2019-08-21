@@ -40,8 +40,8 @@ export class ArticlesListPage extends Component {
   render() {
     return (
       <div>
-        <h1 className="title">Down the Aisle</h1>
-        <h2 className="top-stories">Today's top stories</h2>
+        <h1 className="title">Today's top stories</h1>
+        <h2 className="top-stories"></h2>
         <div className="articles-container">
           <div className="temp-image">
             <img src={news} alt="local news" className="news-image" />
