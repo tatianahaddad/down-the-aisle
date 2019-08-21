@@ -1,18 +1,42 @@
 import React, { Component } from "react";
-import './LandingPage.css'
-import { Link } from 'react-router-dom'
+import "./LandingPage.css";
+import { Link } from "react-router-dom";
 
 export class LandingPage extends Component {
   render() {
     return (
       <div className="landing-container">
         <h1 className="main-title">Down the Aisle</h1>
-        <div className="statement-container">
-          <p className="main-statement">
-            Down the Aisle presents a balanced news perspective. Catch up on today's top news articles from accredited sources. Users can like and comment to join in on the discussion and share their insight on a story.
-          </p>
+        <div className="centering">
+          <div className="left-statement">
+            <p className="headline">ALL THE NEWS </p>
+            <p className="border" />
+            <p>
+              Catch up instantly on the top news stories sweeping the nation.
+            </p>
+          </div>
+          <div className="middle-statement">
+            <p className="headline">ALL THE SOURCES</p>
+            <p className="border" />
+            <p>
+              Receive all the headlines from accredited resources across all
+              political spectrums.
+            </p>
+          </div>
+          <div className="right-statement">
+            <p className="headline">EVERY PERSPECTIVE</p>
+            <p className="border" />
+            <p>
+              Like, comment, and join in on constructive discussion. No bias,
+              just news. You decide.
+            </p>
+          </div>
         </div>
-        <button className="lets-go"><Link to="/articles" className="started">Click here to get started!</Link></button>
+        <button className="lets-go">
+          <Link to="/articles" className="started">
+            Click here to get started!
+          </Link>
+        </button>
       </div>
     );
   }

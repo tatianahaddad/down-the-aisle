@@ -1,13 +1,12 @@
 @media screen and (min-width: 320px) {
   .landing-container {
-    height: 700px;
+    height: auto;
     display:flex;
     flex-direction: column;
   }
 
   .main-title {
-    background-color: white;
-    font-family: 'Bungee Shade', cursive;
+    font-family: 'Gravitas One', cursive;
     color: black;
     margin-top: 50px;
     font-size: 40px;
@@ -25,24 +24,80 @@
   }
 
   .statement-container {
-    width: 80%;
+    /*width: 80%;*/
+    display: flex;
     margin-top: 0px;
     margin: auto;
     background-color: white;
   }
 
-  .main-statement {
-    background-color: white;
-    height: auto;
-    width: auto;
-    font-size: 20px;
+  .border {
+    border-top: 2px solid darkblue;
+    width: 75%;
+    margin: auto;
+  }
+
+  .centering {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+  }
+
+  .left-statement {
+    border-radius: 25px;
+    box-shadow: 5px 10px darkblue;
+    padding: 1%;
+    background-color: cornflowerblue;
+    height: 250px;
+    width: 300px;
+    font-size: 30px;
     font-family: 'Stint Ultra Condensed', cursive;
-    margin: 15px;
-    color: black;
+    margin-top: 50px;
+    color: white;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .headline {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .middle-statement{
+    border-radius: 25px;
+    box-shadow: 5px 10px darkblue;
+    padding: 1%;
+    background-color: cornflowerblue;
+    height: 250px;
+    width: 300px;
+    font-size: 30px;
+    font-family: 'Stint Ultra Condensed', cursive;
+    margin-top: 50px;
+    color: white;
+  }
+
+  /*p::first-letter { 
+    font-size: 200%;
+  }*/
+
+  .right-statement{
+    border-radius: 25px;
+    box-shadow: 5px 10px darkblue;
+    padding: 1%;
+    background-color: cornflowerblue;
+    height: 250px;
+    width: 300px;
+    font-size: 30px;
+    font-family: 'Stint Ultra Condensed', cursive;
+    margin-top: 50px;
+    color: white;
   }
 
   .lets-go {
-    margin-top: 15px;
     height: 50px;
     width: 100px;
     margin: auto;
@@ -56,7 +111,6 @@
 
 @media screen and (min-width: 800px) {
   .main-title {
-    background-color: white;
     width: 75%;
     color: black;
     margin: auto;
@@ -69,16 +123,6 @@
     margin-top: 15px;
     height: 35px;
     margin-right: 50%
-  }
-
-  .main-statement {
-    background-color: white;
-    height: auto;
-    width: auto;
-    font-size: 30px;
-    font-family: 'Stint Ultra Condensed', cursive;
-    margin: 15px;
-    color: black;
   }
 
 }

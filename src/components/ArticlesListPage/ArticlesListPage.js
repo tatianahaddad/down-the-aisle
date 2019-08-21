@@ -7,16 +7,19 @@ export class ArticlesListPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      likes: 0,
-      updated: false,
+      likes: [],
+      updated: false
     };
   }
 
   handleLikes = () => {
-    console.log('clicked') 
-  }
+    console.log("clicked");
+  };
 
   updateLikes = () => {
+    /*if (this.state.likes === 1) {
+      return 
+    }*/
     if (!this.state.updated) {
       this.setState((prevState, props) => {
         return {
@@ -53,7 +56,7 @@ export class ArticlesListPage extends Component {
             <button className="interactive-button" onClick={this.updateLikes}>
               Like
             </button>
-            <p>+{this.state.likes}</p>
+            <p className="likes-counter">{this.state.likes} likes</p>
             <button className="interactive-button">Comment</button>
           </div>
         </div>
@@ -68,10 +71,10 @@ export class ArticlesListPage extends Component {
             </p>
           </div>
           <div className="like-comment">
-          <button className="interactive-button" onClick={this.updateLikes}>
+            <button className="interactive-button" onClick={this.updateLikes}>
               Like
             </button>
-            <p>+{this.state.likes}</p>
+            <p className="likes-counter">{this.state.likes} likes</p>
             <button className="interactive-button">Comment</button>
           </div>
         </div>
@@ -86,10 +89,10 @@ export class ArticlesListPage extends Component {
             </p>
           </div>
           <div className="like-comment">
-          <button className="interactive-button" onClick={this.updateLikes}>
+            <button className="interactive-button" onClick={this.updateLikes}>
               Like
             </button>
-            <p>+{this.state.likes}</p>
+            <p className="likes-counter">{this.state.likes} likes</p>
             <button className="interactive-button">Comment</button>
           </div>
         </div>
