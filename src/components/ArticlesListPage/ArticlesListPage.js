@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import "./ArticlesListPage.css";
 import news from "../images/local-news.png";
+//import Pusher from 'pusher-js/react-native';
 //import news from "..../images/local-news.png";
+
+
 
 export class ArticlesListPage extends Component {
   constructor(props) {
@@ -41,7 +44,6 @@ export class ArticlesListPage extends Component {
     return (
       <div>
         <h1 className="title">Today's top stories</h1>
-        <h2 className="top-stories"></h2>
         <div className="articles-container">
           <div className="temp-image">
             <img src={news} alt="local news" className="news-image" />
