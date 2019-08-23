@@ -8,7 +8,7 @@ export class nav extends Component {
   render() {
     return (
       <div className="not-logged-in">
-        <Link to="/" className="left"><img src={logo} alt="Down the Aisle Icon" class="icon"></img></Link>
+        <Link to="/" className="left"><img src={logo} alt="Down the Aisle Icon" className="icon"></img></Link>
         <Link to="/register" className="right">Register</Link>
         <Link to="/login" className="right">Log in</Link>
       </div>

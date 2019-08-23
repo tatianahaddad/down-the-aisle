@@ -11,10 +11,45 @@ import Footer from '../Footer/Footer'
 import "./App.css";
 import LandingPage from '../LandingPage/LandingPage'
 import { tsConstructorType } from "@babel/types";
+import ArticleApiService from '../../services/article-api-service'
 
 import React, { Component } from 'react'
 
 export class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      articles : {}
+    };
+  }
+
+  componentDidMount() {
+    ArticleApiService.getArticles()
+    .then(data => {
+      const articles = data;
+      this.setState({
+        articles: articles
+      })
+    })
+    .catch(err => {
+      this.setState({
+        error: err.message
+      })
+    })
+  }
+  
+    /*componentDidMount() {
+      ArticleApiService.getArticles()
+      .then(data => {
+        const articles = data
+        this.setState({
+          articles: articles
+        })
+        //console.log(data)
+      }
+
+    }*/
+
   render() {
     return (
       <div className="App">

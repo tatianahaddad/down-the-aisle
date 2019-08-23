@@ -3,6 +3,7 @@ import "./ArticlesListPage.css";
 import news from "../images/local-news.png";
 //import Pusher from 'pusher-js/react-native';
 //import news from "..../images/local-news.png";
+import ArticleApiService from '../../services/article-api-service'
 
 
 
@@ -13,6 +14,11 @@ export class ArticlesListPage extends Component {
       likes: [],
       updated: false
     };
+  }
+
+  componentDidMount() {
+    ArticleApiService.getArticles()
+    .then(console.log('ran'))
   }
 
   handleLikes = () => {
