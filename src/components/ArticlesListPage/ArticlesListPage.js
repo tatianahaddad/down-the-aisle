@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./ArticlesListPage.css";
-import news from "../images/local-news.png";
+import ArticlePage from '../ArticlePage/ArticlePage';
+import {Link} from 'react-router-dom';
 //import Pusher from 'pusher-js/react-native';
-//import news from "..../images/local-news.png";
-import ArticleApiService from '../../services/article-api-service'
-
 
 
 export class ArticlesListPage extends Component {
@@ -12,23 +10,51 @@ export class ArticlesListPage extends Component {
     super(props);
     this.state = {
       likes: [],
-      updated: false
+      updated: false,
+      isHidden: true
     };
   }
 
-  componentDidMount() {
+  clickForMore() {
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
+      console.log('this was clicked')
+    }
+
+  articles() {
+    return (this.props.articles)
+    .map(article => {
+      return <div className="articles-container">
+      <button className="temp-image" onClick={this.clickForMore.bind(this)}>
+      <img src={article.urlToImage} alt="global news" className="news-image" />
+      </button>
+      {!this.state.isHidden && article.content }
+      <div className="temp-text">
+        <p>{article.source.name}: {article.author}</p>
+        <p>{article.description}</p>
+      </div>
+      <div className="like-comment">
+        <button className="interactive-button" onClick={this.updateLikes}>
+          Like
+        </button>
+        <p className="likes-counter">{this.state.likes} likes</p>
+        <button className="interactive-button">Comment</button>
+      </div>
+    </div>
+    });
+  }
+
+  /*componentDidMount() {
     ArticleApiService.getArticles()
     .then(console.log('ran'))
-  }
+  }*/
 
   handleLikes = () => {
     console.log("clicked");
   };
 
   updateLikes = () => {
-    /*if (this.state.likes === 1) {
-      return 
-    }*/
     if (!this.state.updated) {
       this.setState((prevState, props) => {
         return {
@@ -50,60 +76,7 @@ export class ArticlesListPage extends Component {
     return (
       <div>
         <h1 className="title">Today's top stories</h1>
-        <div className="articles-container">
-          <div className="temp-image">
-            <img src={news} alt="local news" className="news-image" />
-          </div>
-          <div className="temp-text">
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            </p>
-          </div>
-          <div className="like-comment">
-            <button className="interactive-button" onClick={this.updateLikes}>
-              Like
-            </button>
-            <p className="likes-counter">{this.state.likes} likes</p>
-            <button className="interactive-button">Comment</button>
-          </div>
-        </div>
-        <div className="articles-container">
-          <div className="temp-image">
-            <img src={news} alt="local news" className="news-image" />
-          </div>
-          <div className="temp-text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            </p>
-          </div>
-          <div className="like-comment">
-            <button className="interactive-button" onClick={this.updateLikes}>
-              Like
-            </button>
-            <p className="likes-counter">{this.state.likes} likes</p>
-            <button className="interactive-button">Comment</button>
-          </div>
-        </div>
-        <div className="articles-container">
-          <div className="temp-image">
-            <img src={news} alt="local news" className="news-image" />
-          </div>
-          <div className="temp-text">
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            </p>
-          </div>
-          <div className="like-comment">
-            <button className="interactive-button" onClick={this.updateLikes}>
-              Like
-            </button>
-            <p className="likes-counter">{this.state.likes} likes</p>
-            <button className="interactive-button">Comment</button>
-          </div>
-        </div>
+        {this.articles()}
       </div>
     );
   }

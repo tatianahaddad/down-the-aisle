@@ -23,8 +23,8 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    height: 400px;
-    width: 90%;
+    height: auto;
+    width: 100%;
     margin-bottom: 20px;
     background-color: white;
   }
@@ -34,14 +34,12 @@
   }
 
   .news-image {
-    margin-top: 30px;
     width: 100%;
     height: 100%
   }
   
   .temp-text {
-    margin-top: 50px;
-    height: 200px;
+    height: auto;
     width: 100%;
   }
 
@@ -74,22 +72,27 @@
   .articles-container {
     border-radius: 10px;
     margin: auto;
-    height: 400px;
-    width: 75%;
+    height: auto;
+    width: 60%;
     margin-bottom: 20px;
     background-color: white;
   }
 
-  .news-image {
+  .articles-images {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
     height: 100%;
   }
 
+  .news-image {
+    margin-top: 30px;
+    height: 100%
+  }
+
   .temp-image {
-    height: 80%;
+    height: 100%;
   }
 
   .temp-text { 
@@ -97,46 +100,3 @@
   }
 
 }
-
-
-
-
-
-
-/*input {
-  margin-left: 30px;
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-form {
-  margin-bottom: 50px;
-}
-
-
-
-.temp-image {
-  margin-top: 50px;
-  justify-content: space-evenly;
-  height: 200px;
-  width: 50%;
-  border: 2px solid black;
-}
-
-.temp-text {
-  margin-top: 50px;
-  height: 200px;
-  width: 50%;
-  border: 2px solid black;
-}
-
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 20px;
-  text-align: center;
-  color: rgba(0, 0, 255, 0.466);
-}
-*/

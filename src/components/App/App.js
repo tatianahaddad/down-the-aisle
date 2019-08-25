@@ -3,10 +3,10 @@ import { Switch, Route } from "react-router-dom";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import ArticlesListPage from "../ArticlesListPage/ArticlesListPage";
+import ArticlePage from '../ArticlePage/ArticlePage'
 import PublicOnlyRoute from "../../Utils/PublicOnlyRoute";
 import PrivateRoute from "../../Utils/PrivateRoute";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
-import ArticlePage from "../ArticlePage/ArticlePage";
 import Footer from '../Footer/Footer'
 import "./App.css";
 import LandingPage from '../LandingPage/LandingPage'
@@ -19,7 +19,7 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles : {}
+      articles : []
     };
   }
 
@@ -58,8 +58,18 @@ export class App extends Component {
       </header>
       <main>
         <Switch>
-          <Route exact path={"/"} component={LandingPage} />
-          <Route path={"/articles"} component={ArticlesListPage} />
+          <Route 
+            exact path={"/"} 
+            component={LandingPage} />}
+          />
+          <Route 
+            path={"/articles"} 
+            render={() => <ArticlesListPage articles={this.state.articles} />}
+          />
+          <Route
+            path={"/article"}
+            component={ArticlePage}
+          />
           <PublicOnlyRoute path={"/login"} component={Login} />
           <PublicOnlyRoute
               path={'/register'}
