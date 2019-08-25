@@ -30,8 +30,8 @@ export class ArticlesListPage extends Component {
       <img src={article.urlToImage} alt="global news" className="news-image" />
       </button>
       {!this.state.isHidden && article.content }
-      <div className="temp-text">
-        <p>{article.source.name}: {article.author}</p>
+      <div className="temp-text" >
+        <a href={article.url} target="_blank" rel="noopener noreferrer"><p>{article.source.name}: {article.author}</p></a>
         <p>{article.description}</p>
       </div>
       <div className="like-comment">
