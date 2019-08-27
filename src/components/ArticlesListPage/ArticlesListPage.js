@@ -11,44 +11,43 @@ export class ArticlesListPage extends Component {
     this.state = {
       likes: [],
       updated: false,
-      isHidden: true
+      isHidden: true,
+      commentClicked: false
     };
   }
 
-  clickForMore() {
+
+  commentButton() {
     this.setState({
-      isHidden: !this.state.isHidden
+      commentClicked: !this.state.commentClicked
     })
-      console.log('this was clicked')
-    }
+    console.log('comment button clicked')
+  }
 
   articles() {
     return (this.props.articles)
     .map(article => {
       return <div className="articles-container">
-      <button className="temp-image" onClick={this.clickForMore.bind(this)}>
+      <a href={article.url} target="_blank" rel="noopener noreferrer"><div className="temp-image">
       <img src={article.urlToImage} alt="global news" className="news-image" />
-      </button>
+      </div></a>
       {!this.state.isHidden && article.content }
       <div className="temp-text" >
-        <a href={article.url} target="_blank" rel="noopener noreferrer"><p>{article.source.name}: {article.author}</p></a>
-        <p>{article.description}</p>
+        <p className="article-source">{article.source.name}: {article.author}</p>
+        <p className="article-description">{article.description}</p>
       </div>
       <div className="like-comment">
         <button className="interactive-button" onClick={this.updateLikes}>
           Like
         </button>
         <p className="likes-counter">{this.state.likes} likes</p>
-        <button className="interactive-button">Comment</button>
+        <button className="interactive-button" onClick={this.commentButton.bind(this)}>Comments</button>
       </div>
+      <div>{!this.state.commentClicked && <textarea className="comment"required="" aria-label="Type a comment..." name="text" id="text" cols="30" rows="3" placeholder="Type a comment.."></textarea>}</div>
+      {!this.state.commentClicked && <button className="comment-submit" type="submit">Post comment</button>}
     </div>
     });
   }
-
-  /*componentDidMount() {
-    ArticleApiService.getArticles()
-    .then(console.log('ran'))
-  }*/
 
   handleLikes = () => {
     console.log("clicked");

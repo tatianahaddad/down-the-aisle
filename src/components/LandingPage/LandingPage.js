@@ -11,14 +11,14 @@ export class LandingPage extends Component {
           <div className="statement-bubbles">
             <p className="headline">ALL THE NEWS </p>
             <p className="border" />
-            <p>
+            <p className="landing-content">
               Catch up instantly on the top news stories sweeping the nation.
             </p>
           </div>
           <div className="statement-bubbles">
             <p className="headline">ALL THE SOURCES</p>
             <p className="border" />
-            <p>
+            <p className="landing-content">
               Receive all the headlines from accredited resources across all
               political spectrums.
             </p>
@@ -26,7 +26,7 @@ export class LandingPage extends Component {
           <div className="statement-bubbles">
             <p className="headline">EVERY SIDE</p>
             <p className="border" />
-            <p>
+            <p className="landing-content">
               Like, comment, and join in on constructive discussion. No bias,
               just news. You decide.
             </p>
@@ -34,7 +34,7 @@ export class LandingPage extends Component {
         </div>
         <button className="lets-go">
           <Link to="/articles" className="started">
-            Click here to get started!
+            Get started!
           </Link>
         </button>
       </div>

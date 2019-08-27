@@ -3,7 +3,11 @@ import config from '../config'
 
 const ArticleApiService = {
   getArticles() {
-    return fetch(`${config.NEWS_ENDPOINT}`)
+    return fetch(`${config.NEWS_ENDPOINT}`, {
+      headers : {
+        "x-api-key": `${config.API_KEY}`
+      }
+    })
       .then(res=> 
         res.json())
       //.then(data => console.log(data))

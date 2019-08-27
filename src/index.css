@@ -1,5 +1,5 @@
-body {
-  background-image: /*linear-gradient(rgba(172, 172, 172, 0.4), rgba(172, 172, 172, 0.4)), */ url(../src/components/images/colorful-map.png);
+/*body {
+  background-image: /*linear-gradient(rgba(172, 172, 172, 0.4), rgba(172, 172, 172, 0.4)), */ /*url(../src/components/images/colorful-map.png);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,13 +14,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+}*/
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap");
-
-@import url("https://fonts.googleapis.com/css?family=Almendra|Bungee+Shade|Gravitas+One|Limelight|Overpass+Mono|Pirata+One|Playfair+Display|Stint+Ultra+Condensed|UnifrakturMaguntia&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Old+Standard+TT&display=swap');

@@ -28,7 +28,7 @@ export class App extends Component {
     .then(data => {
       const articles = data;
       this.setState({
-        articles: articles
+        articles: articles.articles
       })
     })
     .catch(err => {
