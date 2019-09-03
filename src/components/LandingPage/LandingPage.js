@@ -33,7 +33,7 @@ export class LandingPage extends Component {
           </div>
         </div>
         <button className="lets-go">
-          <Link to="/articles" className="started">
+          <Link to="/register" className="started">
             Get started!
           </Link>
         </button>

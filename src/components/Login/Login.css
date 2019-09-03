@@ -1,6 +1,7 @@
 @media screen and (min-width: 320px) {
   .login-containter {
-    border-radius: 25px;
+    border-radius: 15px;
+    border: 1px solid gainsboro;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -8,21 +9,24 @@
     height: auto;
     width: 90%;
     background-color: white;
+    box-shadow: 5px 8px lightgray;
   }
 
   .sign-up {
+    font-family: 'Gentium Book Basic', serif;
     margin-top: 50px;
     text-align: center;
     font-size: 25px;
     color: black;
   }
 
-  b {
-    color: black;
+  .label-login {
     margin-left: 10px;
+    font-family: 'Gentium Book Basic', serif;
   }
 
   .login-input {
+    display: block;
     margin: 10px 10px 10px 10px;
     background-color: rgb(245, 245, 245);
   }
@@ -39,6 +43,8 @@
     height: 45px;
     width: 75px;
     border: 2px solid rgb(245, 245, 245);
+    background-color: whitesmoke;
+    font-family: 'Gentium Book Basic', serif;
   }
 
   .already-reg {

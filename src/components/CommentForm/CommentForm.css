@@ -1,0 +1,20 @@
+#text {
+    display:block;
+    width: 99%;
+    font-size: 15px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    background-color: whitesmoke;
+}
+
+.button-container-comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-submit {
+  height: 30px;
+  margin: auto;
+  background-color: whitesmoke;
+}

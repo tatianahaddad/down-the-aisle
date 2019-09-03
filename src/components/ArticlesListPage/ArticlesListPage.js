@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./ArticlesListPage.css";
-import ArticlePage from '../ArticlePage/ArticlePage';
-import {Link} from 'react-router-dom';
 //import Pusher from 'pusher-js/react-native';
-
+import CommentForm from "../CommentForm/CommentForm";
+import { withRouter } from "react-router-dom";
+import message from "../images/message-bubble.png";
+import "./ArticlesListPage.css";
 
 export class ArticlesListPage extends Component {
   constructor(props) {
@@ -12,40 +12,50 @@ export class ArticlesListPage extends Component {
       likes: [],
       updated: false,
       isHidden: true,
-      commentClicked: false
+      showComment: false
     };
   }
 
-
   commentButton() {
-    this.setState({
-      commentClicked: !this.state.commentClicked
-    })
-    console.log('comment button clicked')
+    if (this.props.userToken) {
+      this.setState({
+        showComment: !this.state.showComment
+      });
+    } else this.props.history.push("/login");
   }
 
   articles() {
-    return (this.props.articles)
-    .map(article => {
-      return <div className="articles-container">
-      <a href={article.url} target="_blank" rel="noopener noreferrer"><div className="temp-image">
-      <img src={article.urlToImage} alt="global news" className="news-image" />
-      </div></a>
-      {!this.state.isHidden && article.content }
-      <div className="temp-text" >
-        <p className="article-source">{article.source.name}: {article.author}</p>
-        <p className="article-description">{article.description}</p>
-      </div>
-      <div className="like-comment">
-        <button className="interactive-button" onClick={this.updateLikes}>
-          Like
-        </button>
-        <p className="likes-counter">{this.state.likes} likes</p>
-        <button className="interactive-button" onClick={this.commentButton.bind(this)}>Comments</button>
-      </div>
-      <div>{!this.state.commentClicked && <textarea className="comment"required="" aria-label="Type a comment..." name="text" id="text" cols="30" rows="3" placeholder="Type a comment.."></textarea>}</div>
-      {!this.state.commentClicked && <button className="comment-submit" type="submit">Post comment</button>}
-    </div>
+    return this.props.articles.map((article, index) => {
+      return (
+        <div className="articles-container" key={index}>
+          <a href={article.url} target="_blank" rel="noopener noreferrer">
+            <div className="temp-image">
+              <img
+                src={article.urlToImage}
+                alt="global news"
+                className="news-image"
+              />
+            </div>
+          </a>
+          {!this.state.isHidden && article.content}
+          <div className="temp-text">
+            <p className="article-source">
+              {article.source.name}: {article.author}
+            </p>
+            <p className="article-description">{article.description}</p>
+          </div>
+          
+            <button
+              className="interactive-button"
+              onClick={this.commentButton.bind(this)}
+            >
+              <img src={message} alt="message icon" />
+            </button>
+            <div>
+              {this.state.showComment && <CommentForm articles={article} />}
+            </div>
+        </div>
+      );
     });
   }
 
@@ -74,11 +84,11 @@ export class ArticlesListPage extends Component {
   render() {
     return (
       <div>
-        <h1 className="title">Today's top stories</h1>
+        <h1 className="title">Today's Top Stories</h1>
         {this.articles()}
       </div>
     );
   }
 }
 
-export default ArticlesListPage;
+export default withRouter(ArticlesListPage);

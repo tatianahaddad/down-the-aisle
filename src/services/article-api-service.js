@@ -12,48 +12,28 @@ const ArticleApiService = {
         res.json())
       //.then(data => console.log(data))
   },
-  /*getArticle(articleId) {
-    return fetch(`${config.API_ENDPOINT}/articles/${articleId}`, {
-      headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
-      },
-    })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
-  },
-  getArticleComments(articleId) {
-    return fetch(`${config.API_ENDPOINT}/articles/${articleId}/comments`, {
-      headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
-      },
-    })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
-  },
-  postComment(articleId, text) {
+
+  postComment(articleUrl, text) {
+    console.log(articleUrl, text)
     return fetch(`${config.API_ENDPOINT}/comments`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
+        //'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify({
-        article_id: articleId,
+        article_url: articleUrl,
         text,
       }),
     })
-      .then(res =>
+    .then(res => 
+      res)
+      /*.then(res =>
         (!res.ok)
           ? res.json().then(e => Promise.reject(e))
           : res.json()
-      )
-  }*/
+      )*/
+  }
 }
 
 export default ArticleApiService

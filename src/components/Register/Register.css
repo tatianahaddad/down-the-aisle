@@ -1,13 +1,15 @@
 @media screen and (min-width: 320px) {
   .register-containter {
-    border-radius: 25px;
+    border-radius: 15px;
+    border: 1px solid gainsboro;
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 75px;
+    margin-top: 100px;
     height: auto;
     width: 90%;
     background-color: white;
+    box-shadow: 5px 8px lightgrey;
   }
 
   .sign-up {
@@ -17,6 +19,7 @@
   }
   
   b {
+    font-family: 'Gentium Book Basic', serif;
     color: black;
     margin-left: 10px;
   }
@@ -47,7 +50,8 @@
     height: 50px;
     width: 40%;
     margin-left: 30%;
-    margin-right: 30%
+    margin-right: 30%;
+    font-size: 15px;
   }
   
   .already-reg {

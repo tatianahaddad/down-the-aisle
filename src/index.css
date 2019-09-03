@@ -1,20 +1,6 @@
-/*body {
-  background-image: /*linear-gradient(rgba(172, 172, 172, 0.4), rgba(172, 172, 172, 0.4)), */ /*url(../src/components/images/colorful-map.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}*/
+body {
+  background-color: whitesmoke;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

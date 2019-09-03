@@ -19,14 +19,16 @@
   }
 
   .articles-container {
-    border: 1px solid lightgray;
+    border: 1px solid gainsboro;
     display: flex;
     flex-direction: column;
     margin-left: auto;
     height: auto;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     background-color: white;
+    box-shadow: 5px 8px lightgray;
+
   }
 
   .temp-image {
@@ -48,6 +50,7 @@
   }
 
   .article-source {
+    font-weight: bold;
     font-family: 'Gentium Book Basic', serif;
     color: rgb(65, 65, 65);
     text-align: center;
@@ -57,7 +60,7 @@
   .article-description {
     font-family: 'Gentium Book Basic', serif;
     color: rgb(65, 65, 65);
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
   }
 
@@ -78,17 +81,6 @@
     font: 400 11px system-ui;
   }
 
-  .comment {
-    display:block;
-    width: 99%;
-    font-size: 15px;
-    border: 1px solid lightgray;
-  }
-
-  .comment-submit {
-    height: 50px;
-  }
-
   p {
     font-family: 'Gentium Book Basic', serif;
     color: rgb(65, 65, 65);
@@ -103,12 +95,19 @@
     text-align: center;
     font-family: 'Old Standard TT', serif;
   }
+
+  .article-source {
+    font-weight: bold;
+    font-size: 20px;
+  }
   .articles-container {
     margin: auto;
     height: auto;
     width: 60%;
     margin-bottom: 20px;
     background-color: white;
+    
+    margin-bottom: 50px;
   }
 
   .articles-images {
