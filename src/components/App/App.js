@@ -30,7 +30,10 @@ export class App extends Component {
         const articles = data;
         this.setState({
           articles: articles.articles
-        });
+        })
+        const articleUrl = articles.articles.map(article => article.url)
+        ArticleApiService.postArticles(articleUrl)
+      .then()
       })
       .catch(err => {
         this.setState({
@@ -38,6 +41,7 @@ export class App extends Component {
         });
       });
   }
+  
 
   /*componentDidMount() {
       ArticleApiService.getArticles()

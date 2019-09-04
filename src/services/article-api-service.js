@@ -10,7 +10,21 @@ const ArticleApiService = {
     })
       .then(res=> 
         res.json())
-      //.then(data => console.log(data))
+  },
+
+  postArticles(url) {
+    console.log(url, 'url')
+    return fetch(`${config.API_ENDPOINT}/api/articles`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        //'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        url
+      }),
+    })
+    .then(console.log('done running'))
   },
 
   postComment(articleUrl, text) {
