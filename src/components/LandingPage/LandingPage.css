@@ -72,13 +72,16 @@
   }
 
   .lets-go {
-    background-color: lightgray;
-    border-radius: 25px;
     height: 50px;
     width: 100px;
-    margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 15px;
+    border: 2px solid white;
+    background-color: white;
+    font-family: 'Gentium Book Basic', serif;
+    border-radius: 10px;
+    box-shadow: 5px 8px lightgray;
   }
 
   .started {
@@ -117,12 +120,13 @@
   }
 
   .lets-go {
-    border-radius: 25px;
     height: 50px;
     width: 100px;
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 8px lightgray;
   }
 
 }

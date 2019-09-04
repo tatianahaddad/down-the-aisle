@@ -19,7 +19,6 @@ export class Register extends Component {
   handleSubmit = ev => {
     ev.preventDefault()
     const { full_name, user_name, password } = ev.target
-    console.log(full_name, 'name')
     this.setState({ error: null })
     AuthApiService.postUser({
       user_name: user_name.value,
@@ -39,7 +38,6 @@ export class Register extends Component {
 
   useDemo(e) {
     e.preventDefault();
-    console.log("clicked");
     this.props.history.push("/articles");
   }
 

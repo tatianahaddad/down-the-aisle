@@ -32,7 +32,7 @@ export class ArticlesListPage extends Component {
             <div className="temp-image">
               <img
                 src={article.urlToImage}
-                alt="global news"
+                alt={article.source.name}
                 className="news-image"
               />
             </div>
@@ -58,28 +58,6 @@ export class ArticlesListPage extends Component {
       );
     });
   }
-
-  handleLikes = () => {
-    console.log("clicked");
-  };
-
-  updateLikes = () => {
-    if (!this.state.updated) {
-      this.setState((prevState, props) => {
-        return {
-          likes: prevState.likes + 1,
-          updated: true
-        };
-      });
-    } else {
-      this.setState((prevState, props) => {
-        return {
-          likes: prevState.likes - 1,
-          updated: false
-        };
-      });
-    }
-  };
 
   render() {
     return (

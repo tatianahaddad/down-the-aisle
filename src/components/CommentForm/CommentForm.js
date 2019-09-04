@@ -15,7 +15,6 @@ export class CommentForm extends Component {
     ev.preventDefault()
     const article_url = this.props.articles.url
     const { text } = ev.target
-    console.log(text.value)
     
     ArticleApiService.postComment(article_url, text.value )
     //.then(this.context.addComment)
@@ -42,9 +41,7 @@ export class CommentForm extends Component {
             rows='3'
             placeholder='Type a comment...'>
           </textarea>
-        </div>
-        <div className='button-container-comment'>
-        <button type='submit' className='comment-submit'>
+          <button type='submit' className='comment-submit'>
           Submit
         </button>
         </div>

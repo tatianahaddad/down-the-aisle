@@ -41,8 +41,7 @@ export class Login extends Component {
         this.props.onLoginSuccess();
       })
       .catch(res => {
-        console.log(res.error);
-        //this.setState({ error: res.error });
+        this.setState({ error: res.error });
       });
   };
   
@@ -55,9 +54,9 @@ export class Login extends Component {
     const { error } = this.state;
     return (
       <form className="whole-container" onSubmit={this.handleSubmitJwtAuth}>
-        <div role="alert">{error && <p className="red">{error}</p>}</div>
         <div className="login-containter">
           <h2 className="sign-up">Login</h2>
+          <div role="alert" className="error-alert">{error && <p className="red">{error}</p>}</div>
           <label className="label-login" htmlFor="LoginForm__user_name">User name</label>
           <input
             className="login-input"

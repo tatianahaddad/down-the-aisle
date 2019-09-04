@@ -13,7 +13,6 @@ const ArticleApiService = {
   },
 
   postArticles(url) {
-    console.log(url, 'url')
     return fetch(`${config.API_ENDPOINT}/api/articles`, {
       method: 'POST',
       headers: {
@@ -24,11 +23,9 @@ const ArticleApiService = {
         url
       }),
     })
-    .then(console.log('done running'))
   },
 
   postComment(articleUrl, text) {
-    console.log(articleUrl, text)
     return fetch(`${config.API_ENDPOINT}/comments`, {
       method: 'POST',
       headers: {

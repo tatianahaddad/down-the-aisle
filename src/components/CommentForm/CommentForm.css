@@ -1,9 +1,7 @@
-#text {
-    display:block;
-    width: 99%;
+.text {
+    display:flex;
     font-size: 15px;
     border: 1px solid lightgray;
-    border-radius: 15px;
     background-color: whitesmoke;
 }
 
@@ -14,7 +12,12 @@
 }
 
 .comment-submit {
-  height: 30px;
+  height: 45px;
+  width: 80px;
   margin: auto;
   background-color: whitesmoke;
+}
+
+.comment-text {
+  width: 90%;
 }

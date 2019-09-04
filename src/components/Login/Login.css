@@ -12,6 +12,10 @@
     box-shadow: 5px 8px lightgray;
   }
 
+  .error-alert {
+    text-align: center;
+  }
+
   .sign-up {
     font-family: 'Gentium Book Basic', serif;
     margin-top: 50px;
